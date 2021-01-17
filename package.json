@@ -1,0 +1,31 @@
+{
+  "name": "tailwindcss-nodejs-exemple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "tailwind": "npx tailwindcss build index.css -o dist/index.css",
+    "autoprefixer": "postcss dist/index.css -u autoprefixer --no-map -o dist/index.css",
+    "minify": "postcss dist/index.css -u cssnano --no-map -o dist/index.min.css",
+    "build": "npm run tailwind && npm run autoprefixer",
+    "production": "npm run tailwind && npm run autoprefixer && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/les-enovateurs/tailwindcss-nodejs-exemple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/les-enovateurs/tailwindcss-nodejs-exemple/issues"
+  },
+  "homepage": "https://github.com/les-enovateurs/tailwindcss-nodejs-exemple#readme"
+}

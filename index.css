@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.move-item:hover {
+    transform:translateZ(100px) translateX(-5px) translateY(-10px);
+    box-shadow:25px 14px 29px 0 rgba(0,0,0,.35)
+}
+
+.-rotate-35 {
+    --tw-rotate: -35deg;
+}
